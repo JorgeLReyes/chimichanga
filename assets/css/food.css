@@ -1,0 +1,170 @@
+.main {
+  justify-content: flex-start;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  gap: 1rem;
+}
+
+.deadpool-food {
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  /* margin-top: 70px; */
+}
+
+.deadpool-food-gif {
+  position: absolute;
+  right: 3rem;
+  top: -67px;
+  z-index: 9999;
+  width: 70px;
+  height: 70px;
+}
+
+.deadpool-food h1 {
+  text-align: center;
+}
+
+.deadpool-food-item-header,
+.deadpool-food-item {
+  border-radius: 1rem;
+}
+
+.deadpool-food-item-header {
+  width: 100%;
+  background-color: var(--color-white);
+  background-image: url("../img/other/deadpool&wolverine.png");
+  height: 25dvh;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 40%;
+  text-align: center;
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.deadpool-food-item-header > :first-child {
+  padding-left: 1rem;
+}
+
+.deadpool-food-item-header > :last-child {
+  padding-right: 1rem;
+}
+
+.deadpool-food-item {
+  background-image: linear-gradient(135deg, var(--color-1), var(--color-2));
+  aspect-ratio: 1 / 1;
+  color: var(--color-white);
+  font-size: clamp(1.2rem, calc(1vw + 1rem), 1.4rem);
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.deadpool-food-item picture {
+  flex-grow: 1;
+  height: 80%;
+  /* pointer-events: none; */
+}
+
+.deadpool-food-item picture img {
+  user-select: none; /* Evita la selección de la imagen */
+  -webkit-user-drag: none; /* Evita el arrastre de la imagen en algunos navegadores */
+  pointer-events: none;
+}
+
+.deadpool-food-select > :nth-child(2) {
+  --gradient: #000;
+  --color-1: #ffd600;
+  --color-2: #f04639;
+}
+
+.deadpool-food-select > :nth-child(3) {
+  --gradient: #000;
+  --color-1: #00ffd1;
+  --color-2: #5112d7;
+}
+
+.deadpool-food-select > :nth-child(4) {
+  --gradient: #000;
+  --color-1: #ff00b8;
+  --color-2: #ad00ff;
+}
+
+.deadpool-food-select > :nth-child(5) {
+  --gradient: #000;
+  --color-1: #00ffe0;
+  --color-2: #c7d712;
+  picture {
+    transform: scale(1.3);
+  }
+}
+
+.deadpool-food-select > :nth-child(6) {
+  --gradient: #000;
+  --color-1: #19f9d1;
+  --color-2: #5caaf2;
+  picture {
+    transform: scale(0.9);
+  }
+}
+
+.deadpool-food-select > :nth-child(7) {
+  --gradient: #000;
+  --color-1: #ffd600;
+  --color-2: #d73512;
+  picture {
+    transform: scale(1.1);
+  }
+}
+
+.deadpool-food-button {
+  width: 100%;
+
+  button {
+    max-width: 600px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    width: inherit;
+    height: 2.5rem;
+  }
+}
+
+.check {
+  outline: solid 4px var(--color-red);
+  outline-style: inset;
+  outline-offset: 2px;
+}
+
+img,
+button {
+  /*user-select: none; /* Evita la selección de la imagen */
+  /*-webkit-user-drag: none; /* Evita el arrastre de la imagen en algunos navegadores */
+  /*  -webkit-touch-callout: none; /* Evita el menú contextual en dispositivos iOS */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 1rem;
+  /* opacity: 1; */
+}
+
+.message.opacity-0 {
+  /* transition: opacity 1s ease-in-out; */
+  /* opacity: 0; */
+}

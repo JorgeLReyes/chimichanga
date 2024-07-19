@@ -1,0 +1,31 @@
+.deadpool-time {
+  --text: clamp(1.8rem, calc(2vw + 2rem), 2.5rem);
+  --subtext: clamp(1rem, calc(2vw + 0.6rem), 1.6rem);
+  width: 100%;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.deadpool-time-clock {
+  flex-grow: 1;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.deadpool-time-clock > div {
+  gap: 0.5rem;
+}
+.deadpool-time-clock > div > span:first-of-type {
+  font-family: var(--font-special);
+  font-size: var(--text);
+}
+
+.deadpool-time-clock > div > span:last-of-type {
+  font-size: var(--subtext);
+}
+
+.deadpool-time-images {
+  width: 50%;
+}

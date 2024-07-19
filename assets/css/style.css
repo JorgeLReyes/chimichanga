@@ -1,0 +1,210 @@
+:root {
+  --color-gray: #f8f8f6;
+  --color-red: #9e0000;
+  --color-yellow: #f6d80c;
+  --color-red-opacity: #9e000040;
+  --color-white: #ffffff;
+  --border-radius-08: 0.8rem;
+  --border-radius-05: 0.5rem;
+  --h1: clamp(1.2rem, calc(2vw + 1rem), 2rem);
+  --h1-special: clamp(1.8rem, calc(2vw + 1.3rem), 2.2rem);
+  --font-special: DeadpoolSpecial;
+}
+
+@font-face {
+  font-family: Deadpool;
+  src: url("../font/Deadpool_Movie.otf");
+}
+
+@font-face {
+  font-family: DeadpoolSpecial;
+  src: url("../font/roguehero.ttf");
+}
+
+html,
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Deadpool;
+  position: relative;
+}
+
+*::selection {
+  background-color: var(--color-red) !important;
+  color: var(--color-white) !important;
+}
+
+body {
+  background-color: var(--color-gray);
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.letter-special {
+  font-family: var(--font-special);
+  font-size: var(--h1-special);
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  /* padding: 0 1rem; */
+  min-height: 100dvh;
+  color: var(--color-red);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-radius: var(--border-radius-05);
+  cursor: pointer;
+}
+
+.font-special {
+  font-family: var(--font-special);
+}
+
+/* LOADER LOGO */
+
+.container-button {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.button.letter {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.deadpool-start {
+  justify-content: space-between;
+  background: inherit;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.deadpool-start > .logo-keychains {
+  height: 50%;
+}
+.deadpool-start > .logo-movie {
+  height: 30%;
+}
+.deadpool-start > .logo-deadpool {
+  height: 10%;
+}
+
+.opacity-0 {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+/* MAIN */
+
+.main {
+  gap: 1rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.main > * {
+  padding: 0 1rem;
+}
+
+/* MAIN HEADER */
+
+.main > header {
+  width: 100%;
+  background-color: var(--color-gray);
+  height: 4rem;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.main > header > picture {
+  height: 100%;
+}
+
+/* MAIN MAIN */
+
+.main main {
+  width: 100%;
+  min-height: calc(100dvh - 8.2rem);
+  flex-grow: 1;
+  margin-bottom: 3.2rem;
+}
+
+/* MAIN FOOTER */
+
+.main footer {
+  max-width: 600px;
+  grid-area: footer;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  height: 3.2rem;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
+nav.flex {
+  box-shadow: 0 0 1px 1px var(--color-red-opacity);
+  border-top-left-radius: var(--border-radius-08);
+  border-top-right-radius: var(--border-radius-08);
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--color-white);
+  justify-content: space-evenly;
+  height: 99%;
+}
+
+nav > button {
+  padding: 0.5rem 0;
+  height: 100%;
+}
+
+/* DEADPOOL SONG */
+.container-song {
+  position: fixed;
+  left: 0;
+  transform: rotate(90deg);
+  width: 60px;
+  bottom: 20vh;
+  padding: 0;
+}
+
+.container-song > picture {
+  width: 100%;
+  height: 100%;
+}

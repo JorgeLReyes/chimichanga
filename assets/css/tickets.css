@@ -1,0 +1,46 @@
+.deadpool-tickets-info {
+  flex-direction: row;
+  height: 30vh;
+  /* width: 100%; */
+  /* min-width: 70vw; */
+  flex-grow: 1;
+  gap: 0.5rem;
+  background-color: var(--color-white);
+  padding: 1rem;
+}
+
+.deadpool-tickets-image {
+  /* width: 35vw; */
+  width: 40%;
+  height: 100%;
+}
+
+.deadpool-tickets-image img {
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+.deadpool-tickets-cinema {
+  flex-grow: 1;
+  gap: 0.25rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.deadpool-tickets-cinema > :nth-child(odd) {
+  color: var(--color-yellow);
+  text-shadow: 1px 1px 1px #181818;
+}
+
+.deadpool-tickets-cinema .font-special {
+  font-size: clamp(1rem, calc(2vw + 1rem), 1.2rem);
+}
+
+.deadpool-tickets-gif {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  width: 70px;
+}

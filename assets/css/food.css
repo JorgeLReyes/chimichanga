@@ -145,14 +145,6 @@
   outline-offset: 2px;
 }
 
-img,
-button {
-  /*user-select: none; /* Evita la selección de la imagen */
-  /*-webkit-user-drag: none; /* Evita el arrastre de la imagen en algunos navegadores */
-  /*  -webkit-touch-callout: none; /* Evita el menú contextual en dispositivos iOS */
-  -webkit-tap-highlight-color: transparent;
-}
-
 .message {
   position: fixed;
   top: 50%;

@@ -1,5 +1,6 @@
 import clock from "./clock.js";
 import food, { check } from "./food.js";
+import song from "./audio.js";
 
 const $container = document.querySelector(".main");
 const $main = document.querySelector(".main main");
@@ -28,6 +29,8 @@ document.addEventListener("click", async (e) => {
   if (e.target.closest("#gift")) {
     if (hash === "#gift") return;
     location.hash = "#gift";
+    clear();
+    await gift();
   }
   if (e.target.closest("#count")) {
     if (hash === "#count") return;
@@ -79,7 +82,18 @@ const foodMovie = async (e) => {
   check(food);
 };
 
+const gift = async () => {
+  const html = await request({ url: "gift.html" });
+  document.head.insertAdjacentHTML(
+    "beforeend",
+    '<link rel="stylesheet" href="./assets/css/gift.css"></link>'
+  );
+  $main.insertAdjacentHTML("afterbegin", html);
+};
+
 document.addEventListener("DOMContentLoaded", async (e) => {
+  song();
+
   const hash = location.hash;
   if (hash === "#food") {
     await foodMovie(e);
@@ -91,6 +105,10 @@ document.addEventListener("DOMContentLoaded", async (e) => {
   }
   if (hash === "#tickets") {
     await ticketsMovie();
+    return;
+  }
+  if (hash === "#gift") {
+    await gift();
     return;
   }
   await timeMovie();

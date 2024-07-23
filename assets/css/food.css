@@ -79,6 +79,7 @@
   user-select: none; /* Evita la selección de la imagen */
   -webkit-user-drag: none; /* Evita el arrastre de la imagen en algunos navegadores */
   pointer-events: none;
+  mask-image: linear-gradient(var(--color-1) 80%, transparent);
 }
 
 .deadpool-food-select > :nth-child(2) {

@@ -195,16 +195,65 @@ nav > button {
 }
 
 /* DEADPOOL SONG */
-.container-song {
+.audio {
   position: fixed;
-  left: 0;
-  transform: rotate(90deg);
-  width: 60px;
+  right: calc(100% - 100px);
+  /* right: 0%; */
+  /* transform: rotate(90deg); */
+  /* width: 60px; */
   bottom: 20vh;
+  height: 100px;
+  padding: 0;
+  flex-direction: row;
+  width: 400px;
+  max-width: 500px;
+  padding: 0.5rem 1rem;
+  padding-left: 0;
+  transition: transform 1s ease-in-out;
+}
+
+.audio.active {
+  /* left: 0; */
+  transform: translateX(75%);
+}
+
+.container-song {
+  /* max-width: 100px; */
+  width: 100%;
+  height: 100px;
+  transform: rotate(90deg);
   padding: 0;
 }
 
 .container-song > picture {
   width: 100%;
   height: 100%;
+  /* padding: 0; */
+}
+
+.container-song > picture > img {
+  /* height: 100%; */
+  /* width: 100%; */
+  /* object-fit: contain; */
+}
+
+.container-audio {
+  background-color: var(--color-white);
+  height: 100%;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.container-audio picture {
+  /* flex-grow: 1; */
+  width: 30%;
+  /* overflow: hidden; */
+  aspect-ratio: 1 / 1;
+}
+
+.container-audio picture img {
+  object-fit: cover;
 }

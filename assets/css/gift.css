@@ -1,0 +1,20 @@
+.deadpool-gift-title {
+  --text: clamp(0.8rem, calc(2vw + 0.8rem), 1rem);
+
+  p {
+    font-size: var(--text);
+  }
+}
+.deadpool-gift .count-gift {
+  font-family: var(--font-special) !important;
+  color: var(--color-red);
+}
+
+.deadpool-gift-container {
+  grid-template-columns: 1fr 1fr;
+}
+
+.deadpool-gift-container > div {
+  gap: 1rem;
+  aspect-ratio: 1 / 1;
+}
